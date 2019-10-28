@@ -1,2 +1,7 @@
 # forkbomb-win
-a forkbomb in c for windows
+
+This is a forkbomb for win.
+
+# License
+
+WTFPL

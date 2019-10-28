@@ -9,7 +9,7 @@ noreturn inline static void forkbomb(void);
 int main (int argc,char * argv[]) {
   if (argc != 1) {
     if (strcmp(argv[1],"-h") == 0 || strcmp(argv[1],"--help") == 0) {
-      printf("This is a forkbomb for windows,\n
+      printf("This is a forkbomb for windows,\n"
              "\t-h,--help: show this help;\n"
              "\tdefault: run forkbomb.\n");
       return 4;

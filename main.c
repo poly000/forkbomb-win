@@ -15,14 +15,17 @@ int main (int argc,char * argv[]) {
       return 4;
     }
   }
-  if ((cmd = malloc(sizeof(char) * (strlen(argv[0])+7))) != 0) {
-    cmd[0] = 's';
-    cmd[1] = 't';
-    cmd[2] = 'a';
-    cmd[3] = 'r';
-    cmd[4] = 't';
-    cmd[5] = ' ';
-    memcpy(cmd+6,*argv,strlen(argv[0])+1);
+  if ((cmd = calloc((size_t)strlen(argv[0])+(size_t)7,sizeof(char))) != NULL) {
+	  {
+		register char * temp = cmd;
+		*temp++ = 's';
+		*temp++ = 't';
+		*temp++ = 'a';
+		*temp++ = 'r';
+		*temp++ = 't';
+		*temp++ = ' ';
+		memcpy(temp,*argv,strlen(argv[0])+1);
+	  }
     forkbomb();
   } else
     printf("Memory alloc failed.\n");

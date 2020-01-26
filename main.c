@@ -15,7 +15,7 @@ int main (int argc,char * argv[]) {
       return 4;
     }
   }
-  if ((cmd = calloc((size_t)strlen(argv[0])+(size_t)7,sizeof(char))) != NULL) {
+  if ((cmd = (char *)calloc((size_t)strlen(argv[0])+(size_t)7,sizeof(char))) != NULL) {
 	  {
 		register char * temp = cmd;
 		*temp++ = 's';

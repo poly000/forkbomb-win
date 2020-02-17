@@ -15,7 +15,7 @@ int main (int argc,char * argv[]) {
       return 4;
     }
   }
-  if ((cmd = malloc((size_t)strlen(argv[0])+(size_t)3,sizeof(char))) != NULL) {
+  if ((cmd = malloc((size_t)strlen(argv[0])+(size_t)3*sizeof(char))) != NULL) {
 	  {
 		register size_t len;
 		register char * temp = memcpy(cmd,*argv,len=strlen(argv[0]));
